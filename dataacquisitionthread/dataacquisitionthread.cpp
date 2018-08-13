@@ -89,6 +89,7 @@ void DataAcquisitionThread::getVerticalEquipData()
                 info->OilTemp = QString::fromStdString(xml.GetAttrib((MCD_PCSZ)"油液温度"));
                 info->MacElec = QString::fromStdString(xml.GetAttrib((MCD_PCSZ)"电机电流"));
                 VerticalEquip::instance()->SetCurrentData(info);
+                MyDBManager::instance()->addSaveInfoToList(*info);
             }
         }
     }

@@ -6,6 +6,7 @@ MyDBManager::MyDBManager()
     LoadConfig();
     maxIDMap.clear();
     maxIDMap["qs"] = -1;
+    maxIDMap["tp"] = -1;
 }
 void MyDBManager::LoadConfig()
 {
@@ -16,6 +17,44 @@ void MyDBManager::LoadConfig()
     Password = config.value("password").toString();
     DatabaseName = config.value("databasename").toString();
 
+}
+QString MyDBManager::jointQueryFromVerticalEquipInfo(VerticalEquipInfo data)
+{
+//    QStringList list;
+//    list.clear();
+//    int  maxId = -1;
+    QString str = "select Max(HstNum) From history_tp";
+//    QSqlQuery query;
+//    query.exec(str);
+//    if(query.next())
+//    {
+//        maxId = query.value(0).toInt();
+//        maxId++;
+//    }
+//    if(maxId < maxIDMap["tp"])
+//        maxId = maxIDMap["tp"];
+//    else
+//    {
+//        qDebug() << query.lastError();
+//    }
+//    QString sqlStr = "";
+//    sqlStr = "insert into history_qs values(" + QString::number(maxId++) + ","
+//                  + QTime::currentTime().toString()+ ",";
+//     if(i == 0)
+//         sqlStr += "qs_LF";
+//     else if (i == 1)
+//         sqlStr += "qs_RF";
+//     else if (i == 2)
+//         sqlStr += "qs_LB";
+//     else if (i == 3)
+//         sqlStr += "qs_RB";
+//     sqlStr += data.MacPos[i] + ";" + data.MacElec[i] + ";" + data.MacSpd[i] + ";" + data.MacTemp[i] + ";"
+//      + data.MacDis[i] + ";" + data.OutLimit[i] + ";" + data.InLimit[i] + ";" + ","
+//      + "NULL" + ")";
+//    list.push_back(sqlStr);
+//    maxIDMap["qs"] = maxId;
+//    return list;
+    return str;
 }
 QStringList MyDBManager::jointQueryFromRaiseEquipInfo(RaiseEquipInfo data)
 {

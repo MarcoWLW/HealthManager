@@ -11,6 +11,7 @@
 #include <raiseequipwgt/raiseequip.h>
 #include <QTime>
 #include <vector>
+#include <verticalequipwgt/verticalequip.h>
 class MyDBManager
 {
 
@@ -29,13 +30,20 @@ public:
     void ConnectDatabase();
     QSqlTableModel * getModel(QString tableName);
     QStringList jointQueryFromRaiseEquipInfo(RaiseEquipInfo data);
+    QString jointQueryFromVerticalEquipInfo(VerticalEquipInfo data);
         std::map<QString,long long> maxIDMap;
     template <typename T>
     void addSaveInfoToList (T data)
     {
+        if(strcmp(typeid(data).name(),typeid(VerticalEquipInfo).name()) == 0)
+        {
+            VerticalEquipInfo *info = (VerticalEquipInfo *)(&data);
+            jointQueryFromVerticalEquipInfo(*info);
+        }
         if(strcmp(typeid(data).name(),typeid(RaiseEquipInfo).name()) == 0)
         {
-            MyDBManager::instance()->jointQueryFromRaiseEquipInfo(data);
+            RaiseEquipInfo *info = (RaiseEquipInfo *)(&data);
+            jointQueryFromRaiseEquipInfo(*info);
         }
     }
 };
