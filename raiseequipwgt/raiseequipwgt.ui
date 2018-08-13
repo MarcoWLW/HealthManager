@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RaiseEquipWgt</class>
+ <widget class="QWidget" name="RaiseEquipWgt">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1117</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2"/>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>升车设备</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="minimumSize">
+        <size>
+         <width>500</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>升车设备效果</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>支腿-左后</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="EditMacPosLB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="EditMacEleLB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="EditMacSpdLB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="EditMacTempLB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="EditLegDisLB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="EditOutLimitLB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLineEdit" name="EditInLimitLB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>支腿-右后</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="EditMacPosRB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="EditMacEleRB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="EditMacSpdRB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="EditMacTempRB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="EditLegDisRB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="EditOutLimitRB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLineEdit" name="EditInLimitRB">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>支腿-右前</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="EditMacPosRF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="EditMacEleRF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="EditMacSpdRF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="EditMacTempRF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="EditLegDisRF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="EditOutLimitRF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLineEdit" name="EditInLimitRF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>支腿-左前</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="EditMacPosLF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="EditMacEleLF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="EditMacSpdLF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="EditMacTempLF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="EditLegDisLF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="EditOutLimitLF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLineEdit" name="EditInLimitLF">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border-width:0;
+border-style:outset</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>200</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>故障信息</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_7">
+       <property name="title">
+        <string>故障统计信息</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QListWidget" name="listWidget"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
