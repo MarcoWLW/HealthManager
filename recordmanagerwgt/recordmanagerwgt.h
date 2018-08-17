@@ -7,7 +7,7 @@
 #include "markup/Markup.h"
 #include <QStringList>
 #include <QComboBox>
-
+#include "mydbmanager/mydbmanager.h"
 namespace Ui {
 class RecordManagerWgt;
 }
@@ -29,9 +29,14 @@ private slots:
 
     void onLabelinfotableItemclicked(QTableWidgetItem *item);
 
+    void onUpdatebtnClicked();
+
+    void onSyncbtnClicked();
+
 private:
     int curRow;
     Ui::RecordManagerWgt *ui;
+    QStringList header;
 };
 
 #endif // RECORDMANAGERWGT_H

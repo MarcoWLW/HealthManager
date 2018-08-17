@@ -27,6 +27,13 @@ HealthManagerWgt::HealthManagerWgt(QWidget *parent) :
     timer->start(50);
     /*************************/
     ui->mainTabWidget->setCurrentIndex(0);
+    QTimer *sqlTimer = new QTimer(this);
+    sqlTimer->start(50);
+    connect(sqlTimer,SIGNAL(timeout()),this,SLOT(onTimeOut()));
+}
+void HealthManagerWgt::onTimeOut()
+{
+    MyDBManager::instance()->checkRecord();
 }
 void HealthManagerWgt::UpdateWidgets()
 {

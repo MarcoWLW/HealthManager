@@ -5,11 +5,12 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    DataAcquisitionThread *thread = new DataAcquisitionThread;
-    thread->start();
+
     /**DB manager*/
     MyDBManager::instance()->ConnectDatabase();
     /*******************/
+    DataAcquisitionThread *thread = new DataAcquisitionThread;
+    thread->start();
     /**load style sheet*/
     QString qss;
     QFile qssFile("./qss/mystyle.qss");

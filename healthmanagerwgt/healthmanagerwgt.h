@@ -20,6 +20,7 @@ public:
     ~HealthManagerWgt();
 public slots:
     void UpdateWidgets();
+    void onTimeOut();
 private:
     Ui::HealthManagerWgt *ui;
     maintianmanager *maintianManaWgt;

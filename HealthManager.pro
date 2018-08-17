@@ -30,7 +30,9 @@ SOURCES += main.cpp\
     dataacquisitionthread/dataacquisitionthread.cpp \
     chassis/chassisinfo.cpp \
     recordmanagerwgt/recordmanager.cpp \
-    controlequipment/controlequipmentinfo.cpp
+    controlequipment/controlequipmentinfo.cpp \
+    mydefine/mydefine.cpp \
+    connectionpool/connectionpool.cpp
 
 HEADERS  +=    addtask/addtask.h \
     healthmanagerwgt/healthmanagerwgt.h \
@@ -50,7 +52,9 @@ HEADERS  +=    addtask/addtask.h \
     chassis/chassisinfo.h \
     recordmanagerwgt/recordmanager.h \
     controlequipmentinfo.h \
-    controlequipment/controlequipmentinfo.h
+    controlequipment/controlequipmentinfo.h \
+    mydefine/mydefine.h \
+    connectionpool/connectionpool.h
 
 FORMS    +=    addtask/addtask.ui \
     healthmanagerwgt/healthmanagerwgt.ui \

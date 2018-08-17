@@ -17,6 +17,7 @@ void DataAcquisitionThread::run()
     /**读取数据*/
     while(1)
     {
+//       mutexForAddSqlString->lock();
         /**get data*/
         GetRaiseEquipData();
         getBatteryMessage();
@@ -31,6 +32,7 @@ void DataAcquisitionThread::run()
         getExchangeMsg();
         getStoreMsg();
         getInterfaceMsg();
+//        mutexForAddSqlString->unlock();
         /***/
         msleep(500);
     }
@@ -121,6 +123,7 @@ void DataAcquisitionThread::getBatteryMessage()
                 xml.FindChildElem("单体电流");
                 info->singleTemp = QString::fromStdString(xml.GetChildAttrib((MCD_PCSZ)"最高"))+QString::fromUtf8("、")+QString::fromStdString(xml.GetChildAttrib((MCD_PCSZ)"最低"));
                 chassisinfo::instance()->setCurentMsg(info);
+                MyDBManager::instance()->addSaveInfoToList(*info);
             }
         }
     }
@@ -161,6 +164,7 @@ void DataAcquisitionThread::getDeapuLeftmsg()
                 list.append(QString::fromStdString(xml.GetAttrib((MCD_PCSZ)"逆变器")));
                 info->keyTemp.assign(list.begin(),list.end());
                 chassisinfo::instance()->setCurentDeapuMsg(info);
+                MyDBManager::instance()->addSaveInfoToList(*info,0);
             }
         }
     }
@@ -201,6 +205,7 @@ void DataAcquisitionThread::getDeapuRightMsg()
                 list.append(QString::fromStdString(xml.GetAttrib((MCD_PCSZ)"逆变器")));
                 info->keyTemp.assign(list.begin(),list.end());
                 chassisinfo::instance()->setCurentDeapuRightMsg(info);
+                MyDBManager::instance()->addSaveInfoToList(*info,1);
             }
         }
     }
@@ -229,6 +234,7 @@ void DataAcquisitionThread::getDC1Msg()
                     xml.FindChildElem("输出电流");
                     info->outputEletricity = QString::fromStdString(xml.GetChildData());
                     chassisinfo::instance()->setCurentDC1Msg(info);
+                    MyDBManager::instance()->addSaveInfoToList(*info,1);
                 }
             }
         }
@@ -257,6 +263,7 @@ void DataAcquisitionThread::getDC2Msg()
                     xml.FindChildElem("输出电流");
                     info->outputEletricity = QString::fromStdString(xml.GetChildData());
                     chassisinfo::instance()->setCurentDC2Msg(info);
+                     MyDBManager::instance()->addSaveInfoToList(*info,2);
                 }
                 xml.OutOfElem();
             }
@@ -285,6 +292,7 @@ void DataAcquisitionThread::getACMsg()
                 xml.FindChildElem("输出电流");
                 info->outputEletricity = QString::fromStdString(xml.GetChildData());
                 chassisinfo::instance()->setCurentACMsg(info);
+                MyDBManager::instance()->addSaveInfoToList(*info);
             }
         }
     }
@@ -336,7 +344,7 @@ void DataAcquisitionThread::getAxleMsg()
                 {
                     chassisinfo::instance()->setCurentAxleMsg5(info);
                 }
-
+                MyDBManager::instance()->addSaveInfoToList(*info,tmp.toInt());
                 xml.OutOfElem();
             }
         }
@@ -388,7 +396,7 @@ void DataAcquisitionThread::getCalculateMsg()
         }
     }
 }
-//
+//主机交换单元
 void DataAcquisitionThread::getExchangeMsg()
 {
     CMarkup xml;
@@ -429,7 +437,7 @@ void DataAcquisitionThread::getExchangeMsg()
         }
     }
 }
-//
+//主机储存单元
 void DataAcquisitionThread::getStoreMsg()
 {
     CMarkup xml;
@@ -460,7 +468,7 @@ void DataAcquisitionThread::getStoreMsg()
         }
     }
 }
-
+//信息接口设备
 void DataAcquisitionThread::getInterfaceMsg()
 {
     CMarkup xml;

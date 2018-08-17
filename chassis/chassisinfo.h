@@ -47,7 +47,6 @@ struct axle
     QString driveInputVol;
     QString driveInputEletricity;
     QString inverterTemp;
-
 };
 
 class chassisinfo

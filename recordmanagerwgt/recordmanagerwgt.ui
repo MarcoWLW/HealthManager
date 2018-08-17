@@ -111,7 +111,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QListWidget" name="RecordList"/>
+         <widget class="QTableWidget" name="RecordList"/>
         </item>
        </layout>
       </widget>
